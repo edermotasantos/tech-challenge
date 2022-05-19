@@ -79,7 +79,7 @@ deve aparecer no output com a mesma quantidade que apareceu em `new_inv`
 P.S: Este desafio foi adaptado de [freecodecamp.org](https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/inventory-update)
 
 P.S.S: Já escrevemos os testes unitários para este desafio. Eles estão em `src/lib.rs`.
-Como os testes já validam as regras acima, Você pode usa-los guiar o desenvolvimento, mesmo que você decida implementar a solução em outra linguagem.
+Como os testes já validam as regras acima, Você pode usa-los para guiar o desenvolvimento, mesmo que você decida implementar a solução em outra linguagem.
 Os testes podem ser executados com o seguinte comando:
 
 ```shell
