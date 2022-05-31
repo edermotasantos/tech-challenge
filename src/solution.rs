@@ -7,4 +7,5 @@ type Inventory<'a> = Vec<(i32, &'a str)>;
 /// You can learn more about lifetimes [here](https://doc.rust-lang.org/rust-by-example/scope/lifetime.html).
 pub fn update_inventory<'a>(cur_inv: Inventory<'a>, new_inv: Inventory<'a>) -> Inventory<'a> {
     todo!()
+    /// primeiro commit 
 }
