@@ -14,6 +14,7 @@ pub fn update_inventory<'a>(
     if cur_inv.len() == 0 && new_inv != cur_inv {
         return new_inv;
     }
+
     if cur_inv.len() != 0 && new_inv.len() != 0 {
         for j in 0..new_inv.len() {
             let (new_value, new_name) = new_inv[j];
@@ -33,6 +34,7 @@ pub fn update_inventory<'a>(
             }
         }
     }
+
     cur_inv.sort_by_key(|k| k.1);
     return cur_inv;
 }
