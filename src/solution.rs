@@ -5,7 +5,12 @@ type Inventory<'a> = Vec<(i32, &'a str)>;
 /// Don't worry about the `'a` syntax, this is a sligtly advanced concept in Rust called Lifetimes
 /// but you don't need to deeple understand this in order to complete this challenge.
 /// You can learn more about lifetimes [here](https://doc.rust-lang.org/rust-by-example/scope/lifetime.html).
-pub fn update_inventory<'a>(mut cur_inv: Inventory<'a>, new_inv: Inventory<'a>) -> Inventory<'a> {
+pub fn update_inventory<'a>(
+    mut cur_inv: Inventory<'a>,
+    mut new_inv: Inventory<'a>,
+) -> Inventory<'a> {
+    new_inv.sort_by_key(|k| k.1);
+
     if cur_inv.len() == 0 && new_inv != cur_inv {
         return new_inv;
     }
@@ -28,5 +33,6 @@ pub fn update_inventory<'a>(mut cur_inv: Inventory<'a>, new_inv: Inventory<'a>) 
             }
         }
     }
+    cur_inv.sort_by_key(|k| k.1);
     return cur_inv;
 }
