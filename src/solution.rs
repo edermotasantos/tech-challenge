@@ -10,11 +10,9 @@ pub fn update_inventory<'a>(
     mut new_inv: Inventory<'a>,
 ) -> Inventory<'a> {
     new_inv.sort_by_key(|key| key.1);
-
-    if cur_inv.len() == 0 && new_inv != cur_inv {
+    if cur_inv.len() == 0 {
         return new_inv;
     }
-
     for index_i in 0..new_inv.len() {
         let (new_value, name) = new_inv[index_i];
         let mut count = 0;
@@ -32,7 +30,6 @@ pub fn update_inventory<'a>(
             }
         }
     }
-
     cur_inv.sort_by_key(|key| key.1);
     return cur_inv;
 }
